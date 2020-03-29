@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "dev-server": "nodemon --exec babel-node src/server/server.js --ignore dist/",
+    "dev-bundle": "webpack -w -d",
+    "prod-bundle": "webpack -p"
   },
   "keywords": [],
   "author": "",
@@ -23,8 +26,11 @@
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.2.3",
     "eslint": "^6.8.0",
     "eslint-plugin-react": "^7.19.0",
-    "nodemon": "^2.0.2"
+    "jest": "^25.2.3",
+    "nodemon": "^2.0.2",
+    "react-test-render": "^1.1.2"
   }
 }
